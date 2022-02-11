@@ -1,0 +1,46 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\title{DBMS in Parking management system}
+\author{suraj kumar sahu,19111060 }
+\date{January 21, 2022}
+
+\begin{document}
+
+\maketitle
+
+\section*{Abstract}
+When visiting a new place for the first time or going to an event one must often deal with finding a car parking space. This can be a challenging and frustrating task for a number of reasons. In most cases, the location of parking spots is not known beforehand. Even if it is known, the parking location is not ideally suited (might not be the closest or cheapest). Furthermore, if one is visiting a location for some event, one must try to find a parking space amongst the limited parking spaces that are available at events attended by a large group of people. Parking spaces can also have restrictions attached to them. Some parking lots are available only during certain hours of the day or they may only allow parking by people with permits. To help navigate through all these issues. Software used for the parking management system is MySQL. MySQL is a relational database management system (RDBMS) developed by Oracle that is based on structured query language (SQL). A database is a structured collection of data.
+
+\section*{Introduction}
+With the continuous development of the economy, personal vehicles have become an indispensable part of our daily lives. The commodity has become affordable to most working class providing a comfortable way of life; however on the other hand multiple problems strike back which need to be solved. One problem is parking spaces.A variety of sophisticated car parking systems are in use nowadays; however they all require a considerable design time, installation and maintenance cost. In many parking areas the management uses the counter at the checkpoint in order to track the number of vehicles that enter and exit the parking area.Some advanced vehicles have their own parking systems installed but it is still hard for the system itself to confirm whether a vacant parking area truly exists or not.
+
+ general, location specific information is available on the Internet these days. For example, on Google Maps (a popular maps application) [6] we can do location specific searches and find addresses, restaurants, gas stations, and many other things, all relative to the user’s current location. 
+ 
+ Unfortunately, the location specific information is only available for major or popular entities like gas stations, restaurants, addresses, etc. Information for things like parking is not available or is only sparsely available. For example, if we look up parking information for the NIT Raipur campus on Google Maps, we just see the location of the main parking lots on the campus. No detailed information is available on any of the parking lots. We do not know the timings the parking lots are available or whether there are any restrictions in parking in the lots. 
+
+The issue of sparsely available parking data at campus is just one example. We found a similar lack of data on other types of locations. The only places that tend to have detailed parking information are major hubs like airports, bus stations, train stations, etc. In such locations, not only location and availability of parking lots is available but in some locations one also gets to see real-time availability of parking spots. For example, at parking garages next to the swami vivekanand airport Raipur one can exactly see the number of open parking spots on an electronic display board. 
+
+
+
+how do parking lot operates?
+ Customers who enter parking lots belong to one of the following groups:
+ \begin{enumerate}
+     \item   A regular customer who has purchased a biweekly, monthly, or yearly pass.
+     \item  A prepaid customer who booked a slot remotely (on the phone or online).
+     \item A walk-in customer who neither has a pass nor booked a slot remotely. A slot will be assigned to such a customer based on availability
+ \end{enumerate}
+\subsection*{SPOT AND PARK ARCHITECTURE}
+ Spot and Park will be mainly used as a mobile web-based application. From the driver’s perspective, using Spot and Park from the comfort of their phone is the most convenient, which is why using this kind of technology for this tool makes sense. However, there are other components that comprise the Spot and Park system that also play and important role. First, there is the database, which contains in a centralized way all the data sent by the users via their smartphone Internet connection. Second, there is a Spot and Park website for admin users who are event planners responsible for booking parking lots/spaces for specific occasions.
+
+     
+
+
+
+
+
+
+
+
+
+\end{document}
