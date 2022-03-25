@@ -1,0 +1,66 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\title{DBMS in Parking management system}
+\author{suraj kumar sahu,19111060 }
+\date{January 21, 2022}
+
+\begin{document}
+
+\maketitle
+
+\section*{Abstract}
+When visiting a new place for the first time or going to an event one must often deal with finding a car parking space. This can be a challenging and frustrating task for a number of reasons. In most cases, the location of parking spots is not known beforehand. Even if it is known, the parking location is not ideally suited (might not be the closest or cheapest). Furthermore, if one is visiting a location for some event, one must try to find a parking space amongst the limited parking spaces that are available at events attended by a large group of people. Parking spaces can also have restrictions attached to them. Some parking lots are available only during certain hours of the day or they may only allow parking by people with permits. To help navigate through all these issues. Software used for the parking management system is MySQL. MySQL is a relational database management system (RDBMS) developed by Oracle that is based on structured query language (SQL). A database is a structured collection of data.
+
+\section*{Introduction}
+With the continuous development of the economy, personal vehicles have become an indispensable part of our daily lives. The commodity has become affordable to most working class providing a comfortable way of life; however on the other hand multiple problems strike back which need to be solved. One problem is parking spaces.A variety of sophisticated car parking systems are in use nowadays; however they all require a considerable design time, installation and maintenance cost. In many parking areas the management uses the counter at the checkpoint in order to track the number of vehicles that enter and exit the parking area.Some advanced vehicles have their own parking systems installed but it is still hard for the system itself to confirm whether a vacant parking area truly exists or not.
+
+ general, location specific information is available on the Internet these days. For example, on Google Maps (a popular maps application) [6] we can do location specific searches and find addresses, restaurants, gas stations, and many other things, all relative to the user’s current location. 
+ 
+ Unfortunately, the location specific information is only available for major or popular entities like gas stations, restaurants, addresses, etc. Information for things like parking is not available or is only sparsely available. For example, if we look up parking information for the NIT Raipur campus on Google Maps, we just see the location of the main parking lots on the campus. No detailed information is available on any of the parking lots. We do not know the timings the parking lots are available or whether there are any restrictions in parking in the lots. 
+
+The issue of sparsely available parking data at campus is just one example. We found a similar lack of data on other types of locations. The only places that tend to have detailed parking information are major hubs like airports, bus stations, train stations, etc. In such locations, not only location and availability of parking lots is available but in some locations one also gets to see real-time availability of parking spots. For example, at parking garages next to the swami vivekanand airport Raipur one can exactly see the number of open parking spots on an electronic display board. 
+
+
+
+how do parking lot operates?
+ Customers who enter parking lots belong to one of the following groups:
+ \begin{enumerate}
+     \item   A regular customer who has purchased a biweekly, monthly, or yearly pass.
+     \item  A prepaid customer who booked a slot remotely (on the phone or online).
+     \item A walk-in customer who neither has a pass nor booked a slot remotely. A slot will be assigned to such a customer based on availability
+ \end{enumerate}
+\subsection*{SPOT AND PARK ARCHITECTURE}
+ Spot and Park will be mainly used as a mobile web-based application. From the driver’s perspective, using Spot and Park from the comfort of their phone is the most convenient, which is why using this kind of technology for this tool makes sense. However, there are other components that comprise the Spot and Park system that also play and important role. First, there is the database, which contains in a centralized way all the data sent by the users via their smartphone Internet connection. Second, there is a Spot and Park website for admin users who are event planners responsible for booking parking lots/spaces for specific occasions.
+\subsection*{MYSQL DATABASE }
+   The MySQL database is used to house all the parking, event, building, and parking availability information. Some of this information will be static information like parking lot information (name, location, geo-coordinates, description) which has to be entered on-time manually into the database. There will also be a lot of dynamic information like a calendar of events which will be entered through the admin interface. In the database, we will also track the number of open spots for each parking lot. This data can be entered through the mobile website (admin only function) but because of the open nature of the database, could also be fed through other sources. For example, if we have a source that feeds us real time availability of a parking spot (perhaps through sensors embedded on each parking spot), we can feed that information directly to this database. Once that information is in the database, it can be easily used by the mobile interface to show all users availability of parking lots.
+  \subsection*{USER INTERFACE }
+  The user interface of the mobile website is designed from the perspective of 3 types of users: student/staff who go to UMD, visitors who frequently have to come to campus for meetings and events, and administrators who need to manage the parking lots and events.
+  \subsubsection*{Student/Staff}
+  Students and staff typically have assigned parking area on campus. They come regularly to campus so they are aware of the roads and the general structure and location of the parking lots. They regularly attend events on-campus and sometimes these events are not close to their designated parking areas so they also have to find nearest parking. Because certain events on campus (like football or basketball games) tend to take over parking lots allotted to people, students/staff are often asked to move their car before an event starts. So, this set of users could benefit from being notified if there is an event happening on campus that would affect their parking situation on a certain day. We have added this feature in the interface and is discussed below in detail. 
+
+\begin{enumerate}
+    \item  \textbf{Parking for events: }Users can look at the list of parking lots to decide which is most appropriate for them or they can look at the parking lots in a map by clicking the View on Map button. In either of the views (list or map), a user can click on a parking lot, get more information about it, or get driving directions to the parking lot from their current location or some other address.
+\item \textbf{Campus map:}The campus map function will show the location of all parking lots on campus. The parking lots can be viewed in a list or on a map. Same as the Parking for events feature, user can click on any of the parking lots to get more information about it or to get driving directions to it.
+
+\item  \textbf{Signup for notifications:}As previously mentioned, this feature allows a student/staff to sign up for notifications of any upcoming disruptions to their parking assignments . Users need to specify their parking lot assignment and their email address. If in the future, there are any disruptions, we would email the user with the details of the event including instructions on what to do for alternative parking. Note, that this targeted notification is better than blasting the entire campus community with an email regarding an event that might not affect everyone on campus. 
+\end{enumerate}
+\subsubsection*{Visitor}
+In most cases, visitors have similar needs as student/staff. They need to be able to find parking for events that they might come to campus for. Visitors might come to campus for also other reasons like attend meetings. In these situations, they are not coming in for some large event but are coming in to meet someone in a certain building. So, they just need to know where they can find closest parking for their meeting. So, we provide them the functionality that helps them find that information.
+\subsubsection*{The mobile interface for visitor provides 2 main functions
+}
+\begin{enumerate}
+    \item \textbf{Parking for events and campus map:}This works exactly the same way as it does for students/staff (explained above).
+\item\textbf{ Parking for buildings:}This allows a user to select a building on campus and then look at the closest available parking. User can view the parking lots on a map or in a list view. User can also get to see if a parking lot has fees attached to it and the hours of operation. They can also look up driving directions to any of the available parking lots.
+
+
+
+\end{enumerate}
+
+
+
+
+
+
+
+\end{document}
